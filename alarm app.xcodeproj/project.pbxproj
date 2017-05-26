@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC7905631ED5E0CB00EE1FFB /* alarm app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "alarm app.entitlements"; sourceTree = "<group>"; };
 		FCB8DA361EC895900079C088 /* alarm app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alarm app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB8DA391EC895900079C088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCB8DA3E1EC895900079C088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +79,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC7905641ED5E0CC00EE1FFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FCB8DA2D1EC895900079C088 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +93,7 @@
 				FCB8DA4D1EC895900079C088 /* alarm appTests */,
 				FCB8DA581EC895900079C088 /* alarm appUITests */,
 				FCB8DA371EC895900079C088 /* Products */,
+				FC7905641ED5E0CC00EE1FFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +110,7 @@
 		FCB8DA381EC895900079C088 /* alarm app */ = {
 			isa = PBXGroup;
 			children = (
+				FC7905631ED5E0CB00EE1FFB /* alarm app.entitlements */,
 				FCB8DA6E1EC8E1F30079C088 /* resocres */,
 				FCB8DA691EC89EC20079C088 /* control */,
 				FCB8DA681EC89E7F0079C088 /* model */,
@@ -223,7 +233,13 @@
 				TargetAttributes = {
 					FCB8DA351EC895900079C088 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7CYZGN5S24;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+						};
 					};
 					FCB8DA491EC895900079C088 = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -446,6 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7CYZGN5S24;
 				INFOPLIST_FILE = "alarm app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Pomfret-School.alarm-app";
@@ -459,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7CYZGN5S24;
 				INFOPLIST_FILE = "alarm app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Pomfret-School.alarm-app";

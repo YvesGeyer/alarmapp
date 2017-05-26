@@ -46,10 +46,12 @@ class AlamrVC: UIViewController {
         //print(FirstNumber)
         //print(SecondNumber)
         
+           
         
         print(answer)
-        print(currentHour)
-        print(currentMinute)
+//        print(currentHour)
+//        print(currentMinute)
+        print(soundAlarm)
         
         //sets up the sound that plays on the app
         let path = Bundle.main.path(forResource:  "Wake-up-sounds", ofType: "mp3")//sets up aduio ready to play by maiking file file a url LOOK AT FILES FOR THE RED TEXT
@@ -69,8 +71,9 @@ class AlamrVC: UIViewController {
             //checks if to sound alarm and it the right time then sounds alamer else it prints something.
                 if soundAlarm == true && currentHour < 9 && currentHour > 7{
                     playSound()
+                    print(soundAlarm)
                 }else{
-                    print("beeb beeb, ima sheep. i said, beeb beeb ima sheep")
+                    print(soundAlarm)
                 }
                 
                 }
@@ -79,17 +82,18 @@ class AlamrVC: UIViewController {
         
         //checks if the alarm should not sound and when to sound it.
     while soundAlarm == false{
-            if soundAlarm == false && currentHour == 20{
+            if soundAlarm == false && currentHour > 9{
                 soundAlarm = true
+                print(soundAlarm)
             }else{
-                
+                print(soundAlarm)
             }
         }
 
     }
     
     
-    func playSound() {
+    func playSound() {//function for playing the sound
         
         if btnSound.isPlaying{
             btnSound.stop()
