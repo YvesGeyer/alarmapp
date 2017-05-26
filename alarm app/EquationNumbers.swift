@@ -15,34 +15,34 @@ private var _SecondNumber = Int(arc4random())
 
 private var _answer:Int = _FirstNumber + _SecondNumber
 
-private var _soundAlarm = false
+private var _soundAlarm = true
 
 private var _currentHour = NSCalendar.current.component(.hour, from: NSDate() as Date)
 
 private var _currentMinute = NSCalendar.current.component(.minute, from: NSDate() as Date)
 
-private var _timeOfAlarm = [7,30]
+private var _timeOfAlarm = [7,9]
 
-private var _alarmHour = _timeOfAlarm[0]
+private var _alarmStart = _timeOfAlarm[0]
 
-private var _alarmMinute = _timeOfAlarm[1]
+private var _alarmEnd = _timeOfAlarm[1]
 
-var alarmHour: Int{
+var alarmStart: Int{
     get{
-        return _alarmHour
+        return _alarmStart
     }
     set{
-        _alarmHour = newValue
+        _alarmStart = newValue
     }
 }
 
-var alarmMinute: Int{
+var alarmEnd: Int{
     
     get{
-        return _alarmMinute
+        return _alarmEnd
     }
     set{
-        _alarmMinute = newValue
+        _alarmEnd = newValue
     }
 }
 

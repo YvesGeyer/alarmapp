@@ -26,7 +26,7 @@ class AlamrVC: UIViewController {
             playSound()
             soundAlarm = true
         }
-        print(soundAlarm)
+        //print(soundAlarm)
     }
 
     
@@ -51,7 +51,7 @@ class AlamrVC: UIViewController {
         print(answer)
 //        print(currentHour)
 //        print(currentMinute)
-        print(soundAlarm)
+        //print(soundAlarm)
         
         //sets up the sound that plays on the app
         let path = Bundle.main.path(forResource:  "Wake-up-sounds", ofType: "mp3")//sets up aduio ready to play by maiking file file a url LOOK AT FILES FOR THE RED TEXT
@@ -69,11 +69,13 @@ class AlamrVC: UIViewController {
         while soundAlarm == true{
             
             //checks if to sound alarm and it the right time then sounds alamer else it prints something.
+            //&& currentHour < 9 && currentHour > 7
                 if soundAlarm == true && currentHour < 9 && currentHour > 7{
                     playSound()
-                    print(soundAlarm)
+                    //print(soundAlarm)
                 }else{
-                    print(soundAlarm)
+                    
+                    //print(soundAlarm)
                 }
                 
                 }
@@ -81,12 +83,13 @@ class AlamrVC: UIViewController {
         
         
         //checks if the alarm should not sound and when to sound it.
+        //&& currentHour > 9
     while soundAlarm == false{
             if soundAlarm == false && currentHour > 9{
                 soundAlarm = true
-                print(soundAlarm)
+                //print(soundAlarm)
             }else{
-                print(soundAlarm)
+                //print(soundAlarm)
             }
         }
 
