@@ -22,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="yhQ-gE-SMo">
-                                <rect key="frame" x="118.5" y="120" width="137.5" height="101"/>
+                                <rect key="frame" x="118.5" y="120" width="137.5" height="100.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5m-78-R09">
-                                        <rect key="frame" x="126" y="0.0" width="11.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="127" y="0.0" width="10.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKT-bV-26u">
-                                        <rect key="frame" x="115.5" y="20.5" width="22" height="20.5"/>
+                                        <rect key="frame" x="115.5" y="20" width="22" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0z-Fz-TdB">
                                                 <rect key="frame" x="0.0" y="0.0" width="11" height="20.5"/>
@@ -48,13 +48,13 @@
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Put answer here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0eZ-8I-c2m">
-                                        <rect key="frame" x="0.0" y="41" width="137.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="40.5" width="137.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYe-6M-z96">
-                                        <rect key="frame" x="93.5" y="71" width="44" height="30"/>
+                                        <rect key="frame" x="93.5" y="70.5" width="44" height="30"/>
                                         <state key="normal" title="Check"/>
                                         <connections>
                                             <action selector="answerCheck:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gcf-AJ-mDd"/>
@@ -66,7 +66,7 @@
                                 <rect key="frame" x="223" y="637" width="152" height="30"/>
                                 <state key="normal" title="change times of alarm"/>
                                 <connections>
-                                    <segue destination="P8V-Or-joF" kind="show" id="5xP-4G-Uco"/>
+                                    <segue destination="P8V-Or-joF" kind="showDetail" id="bmp-Ta-sBv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,7 +103,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <action selector="backButton:" destination="P8V-Or-joF" eventType="touchUpInside" id="o62-9g-wyu"/>
+                                    <action selector="backButton:" destination="P8V-Or-joF" eventType="touchUpInside" id="Ez4-0F-qja"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -13,12 +13,12 @@ class AlamrVC: UIViewController {
 
     
     @IBOutlet weak var answerBox: UITextField!
-   
     @IBOutlet weak var secondNumber: UILabel!
     @IBOutlet weak var firstNumber: UILabel!
     @IBAction func answerCheck(_ sender: Any) {
         print(answerBox.text!)
         if self.answerBox.text == "\(answer)"{
+            //checks if the answer given is correct and does someitng based of the anser given
             
             soundAlarm = false
         }else{
@@ -66,32 +66,41 @@ class AlamrVC: UIViewController {
             print(err.debugDescription)// puts error in debug place.
             
         }
-        while soundAlarm == true{
+       
             
             //checks if to sound alarm and it the right time then sounds alamer else it prints something.
             //&& currentHour < 9 && currentHour > 7
-                if soundAlarm == true && currentHour < 9 && currentHour > 7{
-                    playSound()
-                    //print(soundAlarm)
+                if soundAlarm == true{
+                    if currentHour < alarmEnd {
+                        if currentHour > alarmStart{
+                            playSound()
+                            //print(soundAlarm)
+                        }
+                        
+                    }
+                    
                 }else{
                     
                     //print(soundAlarm)
                 }
                 
-                }
+        
                 
         
         
         //checks if the alarm should not sound and when to sound it.
         //&& currentHour > 9
-    while soundAlarm == false{
-            if soundAlarm == false && currentHour > 9{
-                soundAlarm = true
+        
+            if soundAlarm == false {
+                    if currentHour > alarmEnd {
+                        soundAlarm = true
+                    }
                 //print(soundAlarm)
-            }else{
+            }else {
+                
                 //print(soundAlarm)
             }
-        }
+        
 
     }
     

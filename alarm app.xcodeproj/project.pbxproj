@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC4BC6951ED84DAD0008E81D /* changeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4BC6941ED84DAD0008E81D /* changeSettings.swift */; };
+		FC4BC6971ED85D150008E81D /* DroidSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC4BC6961ED85D150008E81D /* DroidSansMono.ttf */; };
 		FCB8DA3A1EC895900079C088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB8DA391EC895900079C088 /* AppDelegate.swift */; };
 		FCB8DA3F1EC895900079C088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB8DA3D1EC895900079C088 /* Main.storyboard */; };
 		FCB8DA411EC895900079C088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB8DA401EC895900079C088 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		FC4BC6941ED84DAD0008E81D /* changeSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = changeSettings.swift; sourceTree = "<group>"; };
+		FC4BC6961ED85D150008E81D /* DroidSansMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSansMono.ttf; sourceTree = "<group>"; };
 		FC7905631ED5E0CB00EE1FFB /* alarm app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "alarm app.entitlements"; sourceTree = "<group>"; };
 		FCB8DA361EC895900079C088 /* alarm app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alarm app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB8DA391EC895900079C088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		FCB8DA6E1EC8E1F30079C088 /* resocres */ = {
 			isa = PBXGroup;
 			children = (
+				FC4BC6961ED85D150008E81D /* DroidSansMono.ttf */,
 				FCB8DA6F1EC8E20B0079C088 /* Wake-up-sounds.mp3 */,
 			);
 			name = resocres;
@@ -281,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4BC6971ED85D150008E81D /* DroidSansMono.ttf in Resources */,
 				FCB8DA441EC895900079C088 /* LaunchScreen.storyboard in Resources */,
 				FCB8DA411EC895900079C088 /* Assets.xcassets in Resources */,
 				FCB8DA3F1EC895900079C088 /* Main.storyboard in Resources */,
