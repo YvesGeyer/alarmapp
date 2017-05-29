@@ -30,7 +30,7 @@ class AlamrVC: UIViewController {
     }
 
     
-    var btnSound: AVAudioPlayer!
+    //var btnSound: AVAudioPlayer!
     
     //let date = NSDate()
     //let calendar = NSCalendar.current
@@ -71,8 +71,8 @@ class AlamrVC: UIViewController {
             //checks if to sound alarm and it the right time then sounds alamer else it prints something.
             //&& currentHour < 9 && currentHour > 7
                 if soundAlarm == true{
-                    if currentHour < alarmEnd {
-                        if currentHour > alarmStart{
+                    if currentHour <= alarmEnd {
+                        if currentHour >= alarmStart{
                             playSound()
                             //print(soundAlarm)
                         }
@@ -91,12 +91,12 @@ class AlamrVC: UIViewController {
         //checks if the alarm should not sound and when to sound it.
         //&& currentHour > 9
         
-            if soundAlarm == false {
-                    if currentHour > alarmEnd {
+        if soundAlarm == false {
+                    if currentHour >= alarmEnd {
                         soundAlarm = true
                     }
                 //print(soundAlarm)
-            }else {
+        }else {
                 
                 //print(soundAlarm)
             }

@@ -7,21 +7,97 @@
 //
 
 import UIKit
+import AVFoundation
 
 class changeSettings: UIViewController {
 
+    
+    @IBOutlet weak var endTimeTextfield: UITextField!
+    @IBOutlet weak var startTimeTextfield: UITextField!
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    @IBAction func changeTimesButton(_ sender: Any) {
+        changeAlarmTime()
+        playAlarm()
+        dismiss(animated: true, completion: nil)
         
     }
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+       
+        
+        
+           }
 
-   
+    
+    func changeAlarmTime (){
+        
+        let timeEnd:Int? = Int(endTimeTextfield.text!)
+        let timestart:Int? = Int(startTimeTextfield.text!)
+        if "\(endTimeTextfield)" != "" {
+            
+                alarmEnd = timeEnd!
+                print("\(alarmEnd)")
+            
+            
+        }else{
+            print("nope")
+        }
+        
+        if "\(startTimeTextfield)" != "" {
+            
+            alarmStart = timestart!
+            print("\(alarmStart)")
+            
+            
+        }else{
+            print("nope")
+        }
+    }
 
+    
+    func playAlarm (){
+        if soundAlarm == true{
+            if currentHour <= alarmEnd {
+                if currentHour >= alarmStart{
+                    playSound()
+                    //print(soundAlarm)
+                }
+                
+            }
+            
+        }else{
+            
+            //print(soundAlarm)
+        }
+        
+        if soundAlarm == false {
+            if currentHour >= alarmEnd {
+                soundAlarm = true
+            }
+            //print(soundAlarm)
+        }else {
+            
+            //print(soundAlarm)
+        }
+
+    }
+
+    func playSound() {//function for playing the sound
+        
+        if btnSound.isPlaying{
+            btnSound.stop()
+        }
+        
+        btnSound.play()
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -33,3 +109,18 @@ class changeSettings: UIViewController {
     */
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

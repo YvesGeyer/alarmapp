@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVFoundation
 
 //all the varibels 
 private var _FirstNumber = Int(arc4random())
@@ -26,6 +27,17 @@ private var _timeOfAlarm = [7,9]
 private var _alarmStart = _timeOfAlarm[0]
 
 private var _alarmEnd = _timeOfAlarm[1]
+
+private var _btnSound: AVAudioPlayer!
+
+var btnSound: AVAudioPlayer{
+    get{
+        return _btnSound
+    }
+    set{
+        _btnSound = newValue
+    }
+}
 
 var alarmStart: Int{
     get{

@@ -6,8 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="DroidSansMono.ttf">
+            <string>DroidSansMono</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--AlamrVC-->
         <scene sceneID="tne-QT-ifu">
@@ -26,12 +32,12 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5m-78-R09">
                                         <rect key="frame" x="127" y="0.0" width="10.5" height="20"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="DroidSansMono" family="Droid Sans Mono" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKT-bV-26u">
-                                        <rect key="frame" x="115.5" y="20" width="22" height="20.5"/>
+                                        <rect key="frame" x="116" y="20" width="21.5" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0z-Fz-TdB">
                                                 <rect key="frame" x="0.0" y="0.0" width="11" height="20.5"/>
@@ -40,8 +46,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBG-mJ-ZKg">
-                                                <rect key="frame" x="11" y="0.0" width="11" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="11" y="0.0" width="10.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="DroidSansMono" family="Droid Sans Mono" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -63,7 +69,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qL6-rH-rbR">
-                                <rect key="frame" x="223" y="637" width="152" height="30"/>
+                                <rect key="frame" x="187" y="597" width="152" height="30"/>
                                 <state key="normal" title="change times of alarm"/>
                                 <connections>
                                     <segue destination="P8V-Or-joF" kind="showDetail" id="bmp-Ta-sBv"/>
@@ -72,10 +78,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qL6-rH-rbR" secondAttribute="bottom" id="4Xo-CP-7WT"/>
                             <constraint firstItem="yhQ-gE-SMo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7OP-8h-5K2"/>
-                            <constraint firstAttribute="trailing" secondItem="qL6-rH-rbR" secondAttribute="trailing" id="Oa7-JC-HZz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qL6-rH-rbR" secondAttribute="trailing" constant="20" id="nd1-VV-6xW"/>
                             <constraint firstItem="yhQ-gE-SMo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="r3j-lj-VOJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qL6-rH-rbR" secondAttribute="bottom" constant="40" id="uDh-PJ-bg9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -100,23 +106,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clj-cB-GCn">
-                                <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                <rect key="frame" x="0.0" y="25" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="backButton:" destination="P8V-Or-joF" eventType="touchUpInside" id="Ez4-0F-qja"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WM1-52-v52">
+                                <rect key="frame" x="34" y="268" width="307" height="131"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the alarm will start and end on the hour. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfA-gs-0nG">
+                                        <rect key="frame" x="0.0" y="0.0" width="307" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="change the start/end times here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p31-xE-JWO">
+                                        <rect key="frame" x="31" y="20.5" width="245.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change start time here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szD-3e-JSc">
+                                        <rect key="frame" x="63" y="41" width="181.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change end time here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raR-D4-iX1">
+                                        <rect key="frame" x="65.5" y="71" width="176" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71s-az-bJc">
+                                        <rect key="frame" x="128" y="101" width="51" height="30"/>
+                                        <state key="normal" title="change"/>
+                                        <connections>
+                                            <action selector="changeTimesButton:" destination="P8V-Or-joF" eventType="touchUpInside" id="z9i-E5-8u0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="clj-cB-GCn" firstAttribute="leading" secondItem="MeY-2z-aM1" secondAttribute="leading" id="2TZ-AV-rI7"/>
-                            <constraint firstItem="clj-cB-GCn" firstAttribute="top" secondItem="MeY-2z-aM1" secondAttribute="top" id="BxW-cf-XJj"/>
+                            <constraint firstItem="clj-cB-GCn" firstAttribute="top" secondItem="MeY-2z-aM1" secondAttribute="top" constant="25" id="BxW-cf-XJj"/>
+                            <constraint firstItem="WM1-52-v52" firstAttribute="centerX" secondItem="MeY-2z-aM1" secondAttribute="centerX" id="EBQ-FV-ZbL"/>
+                            <constraint firstItem="WM1-52-v52" firstAttribute="centerY" secondItem="MeY-2z-aM1" secondAttribute="centerY" id="Hxx-vi-VnG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="endTimeTextfield" destination="raR-D4-iX1" id="Tgd-L3-2zc"/>
+                        <outlet property="startTimeTextfield" destination="szD-3e-JSc" id="D3P-xn-BeJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZZb-PA-Boa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853.60000000000002" y="51.724137931034484"/>
+            <point key="canvasLocation" x="852" y="43"/>
         </scene>
     </scenes>
 </document>
