@@ -22,7 +22,7 @@ private var _currentHour = NSCalendar.current.component(.hour, from: NSDate() as
 
 private var _currentMinute = NSCalendar.current.component(.minute, from: NSDate() as Date)
 
-private var _timeOfAlarm = [7,9]
+private var _timeOfAlarm = [7,8]
 
 private var _alarmStart = _timeOfAlarm[0]
 

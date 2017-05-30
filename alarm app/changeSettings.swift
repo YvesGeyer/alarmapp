@@ -36,13 +36,13 @@ class changeSettings: UIViewController {
            }
 
     
-    func changeAlarmTime (){
+    func changeAlarmTime (){//function to change the time
         
         let timeEnd:Int? = Int(endTimeTextfield.text!)
         let timestart:Int? = Int(startTimeTextfield.text!)
-        if "\(endTimeTextfield)" != "" {
+        if "\(endTimeTextfield)" != "" && self.endTimeTextfield != nil {
             
-                alarmEnd = timeEnd!
+                alarmEnd = (timeEnd)!
                 print("\(alarmEnd)")
             
             
@@ -50,7 +50,9 @@ class changeSettings: UIViewController {
             print("nope")
         }
         
-        if "\(startTimeTextfield)" != "" {
+        if "\(startTimeTextfield)" != ""  && self.startTimeTextfield != nil {
+            
+                
             
             alarmStart = timestart!
             print("\(alarmStart)")

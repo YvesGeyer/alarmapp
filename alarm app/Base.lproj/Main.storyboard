@@ -75,10 +75,19 @@
                                     <segue destination="P8V-Or-joF" kind="showDetail" id="bmp-Ta-sBv"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="vUH-0m-HrE">
+                                <rect key="frame" x="87" y="300.5" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="RQl-LI-MJE"/>
+                                    <constraint firstAttribute="height" constant="100" id="dHO-mA-8nX"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yhQ-gE-SMo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7OP-8h-5K2"/>
+                            <constraint firstItem="vUH-0m-HrE" firstAttribute="top" secondItem="yhQ-gE-SMo" secondAttribute="bottom" constant="80" id="7UA-9w-l9v"/>
+                            <constraint firstItem="vUH-0m-HrE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZNz-Du-BOO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qL6-rH-rbR" secondAttribute="trailing" constant="20" id="nd1-VV-6xW"/>
                             <constraint firstItem="yhQ-gE-SMo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="r3j-lj-VOJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qL6-rH-rbR" secondAttribute="bottom" constant="40" id="uDh-PJ-bg9"/>
@@ -86,6 +95,7 @@
                     </view>
                     <connections>
                         <outlet property="answerBox" destination="0eZ-8I-c2m" id="tNi-nz-CKq"/>
+                        <outlet property="checkMarkIMG" destination="vUH-0m-HrE" id="6VE-u2-8n0"/>
                         <outlet property="firstNumber" destination="R5m-78-R09" id="85q-rQ-B3J"/>
                         <outlet property="secondNumber" destination="EBG-mJ-ZKg" id="4lF-s6-N8c"/>
                     </connections>
@@ -106,14 +116,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clj-cB-GCn">
-                                <rect key="frame" x="0.0" y="25" width="34" height="30"/>
+                                <rect key="frame" x="25" y="25" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="backButton:" destination="P8V-Or-joF" eventType="touchUpInside" id="Ez4-0F-qja"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WM1-52-v52">
-                                <rect key="frame" x="34" y="268" width="307" height="131"/>
+                                <rect key="frame" x="34" y="258" width="307" height="151.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the alarm will start and end on the hour. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfA-gs-0nG">
                                         <rect key="frame" x="0.0" y="0.0" width="307" height="20.5"/>
@@ -121,26 +131,32 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="change the start/end times here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p31-xE-JWO">
-                                        <rect key="frame" x="31" y="20.5" width="245.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="change the start/end times here." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p31-xE-JWO">
+                                        <rect key="frame" x="28.5" y="20.5" width="250" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use 24 hour clock for the times." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yja-a9-ZcW">
+                                        <rect key="frame" x="31" y="41" width="245" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change start time here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szD-3e-JSc">
-                                        <rect key="frame" x="63" y="41" width="181.5" height="30"/>
+                                        <rect key="frame" x="63" y="61.5" width="181.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Change end time here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="raR-D4-iX1">
-                                        <rect key="frame" x="65.5" y="71" width="176" height="30"/>
+                                        <rect key="frame" x="65.5" y="91.5" width="176" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71s-az-bJc">
-                                        <rect key="frame" x="128" y="101" width="51" height="30"/>
+                                        <rect key="frame" x="128" y="121.5" width="51" height="30"/>
                                         <state key="normal" title="change"/>
                                         <connections>
                                             <action selector="changeTimesButton:" destination="P8V-Or-joF" eventType="touchUpInside" id="z9i-E5-8u0"/>
@@ -151,7 +167,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="clj-cB-GCn" firstAttribute="leading" secondItem="MeY-2z-aM1" secondAttribute="leading" id="2TZ-AV-rI7"/>
+                            <constraint firstItem="clj-cB-GCn" firstAttribute="leading" secondItem="MeY-2z-aM1" secondAttribute="leading" constant="25" id="2TZ-AV-rI7"/>
                             <constraint firstItem="clj-cB-GCn" firstAttribute="top" secondItem="MeY-2z-aM1" secondAttribute="top" constant="25" id="BxW-cf-XJj"/>
                             <constraint firstItem="WM1-52-v52" firstAttribute="centerX" secondItem="MeY-2z-aM1" secondAttribute="centerX" id="EBQ-FV-ZbL"/>
                             <constraint firstItem="WM1-52-v52" firstAttribute="centerY" secondItem="MeY-2z-aM1" secondAttribute="centerY" id="Hxx-vi-VnG"/>
@@ -167,4 +183,7 @@
             <point key="canvasLocation" x="852" y="43"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkmark" width="600" height="450"/>
+    </resources>
 </document>

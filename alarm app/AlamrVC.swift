@@ -12,11 +12,13 @@ import AVFoundation
 class AlamrVC: UIViewController {
 
     
+    @IBOutlet weak var checkMarkIMG: UIImageView!
     @IBOutlet weak var answerBox: UITextField!
     @IBOutlet weak var secondNumber: UILabel!
     @IBOutlet weak var firstNumber: UILabel!
     @IBAction func answerCheck(_ sender: Any) {
         print(answerBox.text!)
+        correctImageShown()
         if self.answerBox.text == "\(answer)"{
             //checks if the answer given is correct and does someitng based of the anser given
             
@@ -46,7 +48,7 @@ class AlamrVC: UIViewController {
         //print(FirstNumber)
         //print(SecondNumber)
         
-           
+        checkMarkIMG.isHidden = true // hides check mark
         
         print(answer)
 //        print(currentHour)
@@ -69,7 +71,7 @@ class AlamrVC: UIViewController {
        
             
             //checks if to sound alarm and it the right time then sounds alamer else it prints something.
-            //&& currentHour < 9 && currentHour > 7
+        
                 if soundAlarm == true{
                     if currentHour <= alarmEnd {
                         if currentHour >= alarmStart{
@@ -104,6 +106,19 @@ class AlamrVC: UIViewController {
 
     }
     
+    func correctImageShown (){//function to show the check mark if question was correct.
+        if soundAlarm == true{
+            checkMarkIMG.isHidden = true
+            
+        }else{
+            checkMarkIMG.isHidden = false
+            answerBox.isHidden = true
+        }
+        
+        
+    }
+    
+    }
     
     func playSound() {//function for playing the sound
         
@@ -114,9 +129,9 @@ class AlamrVC: UIViewController {
         btnSound.play()
         
     }
-    
 
-}
+
+
 
 
 
