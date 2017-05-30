@@ -18,14 +18,16 @@ class AlamrVC: UIViewController {
     @IBOutlet weak var firstNumber: UILabel!
     @IBAction func answerCheck(_ sender: Any) {
         print(answerBox.text!)
-        correctImageShown()
-        if self.answerBox.text == "\(answer)"{
+                if self.answerBox.text == "\(answer)"{
             //checks if the answer given is correct and does someitng based of the anser given
-            
+            //print("sound alarm is false")
             soundAlarm = false
+            correctImageShown()
+
         }else{
-            
+            //print("sound alarm is true")
             playSound()
+            correctImageShown()
             soundAlarm = true
         }
         //print(soundAlarm)
@@ -49,6 +51,9 @@ class AlamrVC: UIViewController {
         //print(SecondNumber)
         
         checkMarkIMG.isHidden = true // hides check mark
+        
+        correctImageShown()
+
         
         print(answer)
 //        print(currentHour)
